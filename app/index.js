@@ -65,9 +65,9 @@ var ArrayContent = React.createClass({
     render: function () {
         return (
             <div>
-                <input id="arrayNumbers" ref="arrayNumbers" type="text" placeholder="请输入数组数字，以中文逗号（，）分隔"/>
+                <input id="arrayNumbers" ref="arrayNumbers" type="text" placeholder="请输入数组数字，以中文逗号（，）分隔" className="form-control"/>
                 <p>
-                    <button id="confirmBtn" onClick={this.handleClick}>确认</button>
+                    <button id="confirmBtn" onClick={this.handleClick} className="btn btn-primary">确认</button>
                 </p>
             </div>
         );
