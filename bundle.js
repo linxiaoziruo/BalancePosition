@@ -5,7 +5,7 @@ var ReactDOM = require('react-dom');
 var ArrayContent = React.createClass({
     displayName: 'ArrayContent',
 
-    _checkNumber: function (numberStr) {
+    _valid: function (numberStr) {
         var n = Number(numberStr);
         if (!isNaN(n)) {
             return n;
@@ -48,7 +48,7 @@ var ArrayContent = React.createClass({
         var ret = true;
 
         for (var numberStr in numbersStrArray) {
-            var rs = this._checkNumber(numbersStrArray[numberStr]);
+            var rs = this._valid(numbersStrArray[numberStr]);
             if (rs == "f") {
                 ret = false;
                 break;
