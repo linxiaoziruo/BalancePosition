@@ -4,7 +4,7 @@
   "description": "find balance position",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"webpack-dev-server --hot --inline"
   },
   "author": "zaki",
   "repository": {
@@ -16,9 +16,11 @@
     "babel-preset-react": "^6.24.1",
     "babelify": "^7.3.0",
     "bootstrap": "^3.3.7",
+    "jsx-loader": "^0.13.2",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.2",
     "react-dom": "^15.6.1",
-    "webpack": "^3.5.5"
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
   }
 }
