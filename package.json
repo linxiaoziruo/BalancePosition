@@ -7,5 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "zaki",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:linxiaoziruo/BalancePosition.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "bootstrap": "^3.3.7",
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.2",
+    "react-dom": "^15.6.1"
+  }
 }

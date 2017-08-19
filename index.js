@@ -1,4 +1,5 @@
-console.log('1');
+var React = require('react');
+var ReactDOM = require('react-dom');
 
 var ArrayContent = React.createClass({
     _checkNumber: function (numberStr) {
@@ -14,7 +15,7 @@ var ArrayContent = React.createClass({
         var msg = "";
         var sum = 0;
         for(var n in numberArray){
-            sum += n;
+            sum += numberArray[n];
         }
 
         if(sum % 2 != 0){
@@ -22,7 +23,7 @@ var ArrayContent = React.createClass({
         }else{
             var balanceNuber = sum / 2;
             var increaseNum = 0;
-            for(var i=0; i<numberArray.length; i++){
+            for(var i in numberArray){
                 increaseNum += numberArray[i];
                 if(increaseNum < balanceNuber){
                     continue;
@@ -37,14 +38,14 @@ var ArrayContent = React.createClass({
         alert(msg);
     },
 
-    handleClick: function (numberStr) {
+    handleClick: function () {
         var numbersStr = this.refs.arrayNumbers.value;
-        var numbersStrArray = numberStr.split('，');
+        var numbersStrArray = numbersStr.split('，');
         var numberArray = [];
         var ret = true;
 
-        for(numberStr in numbersStrArray){
-            var rs = this._checkNumber(numberStr);
+        for(var numberStr in numbersStrArray){
+            var rs = this._checkNumber(numbersStrArray[numberStr]);
             if( rs == "f"){
                 ret = false;
                 break;
@@ -66,7 +67,7 @@ var ArrayContent = React.createClass({
             <div>
                 <input id="arrayNumbers" ref="arrayNumbers" type="text" placeholder="请输入数组数字，以中文逗号（，）分隔" class="form-control"/>
                 <p>
-                    <button id="confirmBtn" onclick={this.handleClick} class="btn btn-primary">确认</button>
+                    <button id="confirmBtn" onClick={this.handleClick} class="btn btn-primary">确认</button>
                 </p>
             </div>
         );
